@@ -18,7 +18,6 @@ p {
 
 #create-task {
     padding: 1rem 2rem;
-    border-bottom: 1px solid #E6E9EE;
     display: flex;
     justify-content: space-between;
 }
@@ -61,14 +60,13 @@ h2 {
     padding-bottom: 10px;
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
     float: left;
     margin: 6.3px 0 0;
     margin-right: 20px;
 }
 
 .btns {
-    border-top: 1px solid #E6E9EE;
     padding: 1rem 2rem;
 }
 

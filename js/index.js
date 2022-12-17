@@ -12,7 +12,7 @@ $(document).ready(function(){
         success: function (response, textStatus) {
           $('#todo-list').empty();
           response.tasks.forEach(function (task) {
-            $("#todo-list").append('<div class="row"><li class="list-group-item"><input type="radio" class="mark-complete" data-id="' 
+            $("#todo-list").append('<div class="row"><li class="list-group-item"><input type="checkbox" class="mark-complete" data-id="' 
             + task.id + '"' + (task.completed ? 'checked' : '') + '>' + task.content + 
             '<button class="delete btn btn-sm btn-danger" data-id="' + task.id + 
             '">Delete</button>');
