@@ -3,6 +3,15 @@ var filterResults = function () {
   $(this).siblings().removeClass('active');
   getTasks();
 }
+
+$(document).on('change', '.mark-complete', function () {
+    if (this.checked) {
+      markTaskComplete($(this).data('id'));
+    } else {
+      markTaskActive($(this).data('id'));
+    }
+  });
+
 $(document).ready(function(){
     var getAndDisplayAllTasks = function () {
       $.ajax({
@@ -126,15 +135,6 @@ $(document).ready(function(){
     $(this).addClass("selected");
     $(this).siblings().removeClass("selected");
   });
-
-
-     $(document).on('change', '.mark-complete', function () {
-      if (this.checked) {
-        markTaskComplete($(this).data('id'));
-      } else {
-        markTaskActive($(this).data('id'));
-      }
-    });
   
     getAndDisplayAllTasks();
   });
