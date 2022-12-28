@@ -128,8 +128,8 @@
     deleteTask($(this).data('id'));
   });
 
-  $(document).on('click', '.select', function () {
-    if ($(this).data('completed')) {
+  $(document).on('click', '.mark-complete', function () {
+    if ($(this).data("checked")) {
       markTaskActive($(this).data('id'));
     } else {
     } markTaskComplete($(this).data('id'));
